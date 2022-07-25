@@ -9,10 +9,10 @@ const Tab = createBottomTabNavigator()
 export default props => (
 
     <Tab.Navigator
-        tabBarOptions={{
-            activeTintColor: 'red',
-            inactiveTintColor:'blue',
-            labelStyle:{ fontSize: 30}
+        screenOptions={{
+            tabBarActiveTintColor: 'red',
+            tabBarInactiveTintColor:'blue',
+            tabarBarLabelStyle:{ fontSize:50}
         }} initialRouteName="TelaC">
         <Tab.Screen name="TelaA" component={TelaA} />
         <Tab.Screen name="TelaB" component={TelaB} />
