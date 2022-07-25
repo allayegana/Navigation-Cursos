@@ -24,7 +24,8 @@ export default props => (
         <stack.Screen name="TelaB"
             options={{ title: 'informacao da segundo tela  ' }}>
             {props => (
-                <PassoStack {...props} avancar='TelaC' voltar>
+                <PassoStack {...props} avancar='TelaC'   voltar 
+                avancarParams={{numero:200 }}>
                     <TelaB />
                 </PassoStack>
             )}
@@ -33,8 +34,8 @@ export default props => (
         <stack.Screen name="TelaC"
             options={{ title: 'informacao da utimo tela ' }}>
             {props => (
-                <PassoStack {...props} avancar='TelaA'>
-                    <TelaC />
+                <PassoStack {...props} voltar avancar='TelaC'  >
+                    <TelaC {...props}   />
                 </PassoStack>
             )}
         </stack.Screen>

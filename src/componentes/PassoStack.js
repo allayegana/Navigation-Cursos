@@ -10,11 +10,13 @@ export default props => (
                 onPress={() => props.navigation.goBack()}
                 /> : false
             }
-            
+
             {props.avancar ?
                 <Button 
                 title="Avançar"
-                onPress={() => props.navigation.navigate(props.avancar)}
+                onPress={() => props.navigation.push(
+                    props.avancar,props.avancarParams
+                )}
                 /> : false
             }
 
