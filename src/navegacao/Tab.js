@@ -10,12 +10,17 @@ export default props => (
 
     <Tab.Navigator
         screenOptions={{
-            tabBarActiveTintColor: 'red',
-            tabBarInactiveTintColor:'blue',
-            tabarBarLabelStyle:{ fontSize:50}
-        }} initialRouteName="TelaC">
-        <Tab.Screen name="TelaA" component={TelaA} />
-        <Tab.Screen name="TelaB" component={TelaB} />
-        <Tab.Screen name="TelaC" component={TelaC} />
+            tabBarActiveTintColor:'yellow',
+            tabBarInactiveTintColor: 'green',
+            tabBarShowLabel:true,
+            tabBarActiveBackgroundColor: '#999',
+            tabBarLabelStyle: { fontSize: 20, fontWeight: 'bold' },
+       }} initialRouteName="TelaB">
+        <Tab.Screen name="TelaA"
+            options={{ title: "Inicio" }} component={TelaA} />
+        <Tab.Screen name="TelaB"
+            options={{ title: "Meio" }} component={TelaB} />
+        <Tab.Screen name="TelaC"
+            options={{ title: "Final" }} component={TelaC} />
     </Tab.Navigator>
 )
